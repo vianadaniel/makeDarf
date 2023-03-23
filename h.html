@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form name="autoSumForm" method="post" action="">
+        <table width="100%" height="245" border="0" cellpadding="0" cellspacing="1">
+          <tbody><tr> 
+            <td width="49%" rowspan="11" valign="top">
+      <div align="center"> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#000000">
+                  <tbody><tr> 
+                    <source srcset="brasao.jpg" type="image/jpg">
+                    <td width="15%"><div align="center"><img src="https://sitecontabil.com.br/uploads/brasao.jpg" id="brasao" width="85" height="91"></div></td>
+                    <td width="35%"><font size="3" face="Geneva, Arial, Helvetica, sans-serif">MINISTÉRIO 
+                      DA FAZENDA</font><br> 
+                      <font size="2" face="Geneva, Arial, Helvetica, sans-serif">Secretaria 
+                      da Receita Federal do Brasil</font><br>
+                      <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Documento 
+                      de Arrecadação de Receitas Federais</font><br> <font size="3" face="Geneva, Arial, Helvetica, sans-serif"><strong>DARF</strong></font><br> 
+                    </td>
+                  </tr>
+                  <tr valign="middle"> 
+                    <td height="30" colspan="2"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>01</strong></font> 
+                      <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Nome 
+                      / Telefone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                      <input name="campo1" type="text" size="50" id="campo1" value="{Nome}">
+                      </font></td>
+                  </tr>
+                  <tr> 
+                    <td height="45" colspan="2"> 
+                      <div align="center"><font size="1" face="Geneva, Arial, Helvetica, sans-serif"><strong>Veja 
+                        no verso<br>
+                        instruções para preenchimento.</strong></font></div></td>
+                  </tr>
+                  <tr valign="middle"> 
+                    <td height="100" colspan="2"> <blockquote> 
+                        <div align="center"><font size="1" face="Geneva, Arial, Helvetica, sans-serif"><strong>ATENÇÃO<br>
+                          </strong></font><font size="1" face="Geneva, Arial, Helvetica, sans-serif">É 
+                          vedado o recolhimento de tributos Contribuições 
+                          administrados pela Secretaria da Receita Federal cujo valor 
+                          total seja inferior a R$ 10,00. Ocorrendo tal situação 
+                          adicione tal valor ao tributo/contribuição de 
+                          mesmo código de períodos aubsequentes, até 
+                          que o total seja igual ou superior a R$ 10,00.</font></div>
+                      </blockquote></td>
+                  </tr>
+                </tbody></table>
+              </div></td>
+            <td width="31%" height="19"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>02 
+              </strong></font><font size="1" face="Geneva, Arial, Helvetica, sans-serif">Período 
+              de Apuração </font></td>
+            <td width="20%"><input type="text" name="campo2" maxlength="10" onkeyup="return txtBoxFormat(this, '99/99/9999', event);" onblur="copia(campo2, destino2);" id="campo2"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>03</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Número 
+              de CPF ou CGC</font></td>
+            <td><input type="text" name="campo3" id="campo3" onblur="copia(campo3, destino3);"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>04</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Código 
+              da Receita</font></td>
+            <td><input type="text" name="campo4" id="campo4" onblur="copia(campo4, destino4);"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>05</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Número 
+              de Referência</font></td>
+            <td><input type="text" name="campo5" id="campo5" onblur="copia(campo5, destino5);"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>06</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Data de Vencimento</font></td>
+            <td><input type="text" name="campo6" maxlength="10" onkeyup="return txtBoxFormat(this, '99/99/9999', event);" id="campo6" onblur="copia(campo6, destino6);"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>07</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor do Principal</font></td>
+            <td><input class="right" type="text" name="campo7" value="" onfocus="startCalc();" onblur="stopCalc(); copia(campo7, destino7);" id="campo7"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>08</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor da Multa</font></td>
+            <td><input class="right" type="text" name="campo8" value="" onfocus="startCalc();" onblur="stopCalc(); copia(campo8, destino8);" id="campo8"></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>09</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor dos Juros 
+              e/ou Encargos DL - 1.025/69</font></td>
+            <td><input class="right" type="text" name="campo9" value="" onfocus="startCalc();" onblur="stopCalc(); copia(campo9, destino9);" id="campo9"></td>
+          </tr>
+          <tr> 
+            <td height="10"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>10</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor Total</font></td>
+            <td><input class="right" type="text" name="campo10" id="campo10" onblur="copia(campo10, destino10);"></td>
+          </tr>
+          <tr> 
+            <td height="9" colspan="2"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>11</strong></font> 
+              <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Autenticação 
+              Bancária (somente nas 1ª e 2ª vias)</font></td>
+          </tr>
+          <tr> 
+            <td colspan="2">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="35" colspan="3" valign="top" id="omg">-----------------------------------------------------------------------------------------------------------------------------------</td>
+          </tr>
+          <tr>
+            <td rowspan="11" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#000000">
+              <tbody><tr>
+                <td width="15%"><div align="center"><img src="https://sitecontabil.com.br/uploads/brasao.jpg" alt="" width="85" height="91"></div></td>
+                <td width="35%"><font size="3" face="Geneva, Arial, Helvetica, sans-serif">MINISTÉRIO 
+                  DA FAZENDA</font><br>
+                  <font size="2" face="Geneva, Arial, Helvetica, sans-serif">Secretaria 
+                    da Receita Federal do Brasil</font><br>
+                  <font size="1" face="Geneva, Arial, Helvetica, sans-serif"> Documento 
+                    de Arrecadação de Receitas Federais</font><br>
+                  <font size="3" face="Geneva, Arial, Helvetica, sans-serif"><strong>DARF</strong></font><br></td>
+              </tr>
+              <tr valign="middle">
+                <td height="30" colspan="2"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>01</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Nome 
+                  / Telefone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="campo1-2" type="text" size="50" id="campo1-2" value="{Nome}">
+                </font></td>
+              </tr>
+              <tr>
+                <td height="45" colspan="2"><div align="center"><font size="1" face="Geneva, Arial, Helvetica, sans-serif"><strong>Veja 
+                  no verso<br>
+                  instruções para preenchimento.</strong></font></div></td>
+              </tr>
+              <tr valign="middle">
+                <td height="100" colspan="2"><blockquote>
+                  <div align="center"><font size="1" face="Geneva, Arial, Helvetica, sans-serif"><strong>ATENÇÃO<br>
+                    </strong></font><font size="1" face="Geneva, Arial, Helvetica, sans-serif">É 
+                      vedado o recolhimento de tributos Contribuições 
+                      administrados pela Secretaria da Receita Federal cujo valor 
+                      total seja inferior a R$ 10,00. Ocorrendo tal situação 
+                      adicione tal valor ao tributo/contribuição de 
+                      mesmo código de períodos aubsequentes, até 
+                      que o total seja igual ou superior a R$ 10,00.</font></div>
+                </blockquote></td>
+              </tr>
+            </tbody></table></td>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>02 </strong></font><font size="1" face="Geneva, Arial, Helvetica, sans-serif">Período 
+            de Apuração </font></td>
+            <td width="20%"><input type="text" name="destino2" maxlength="10" onkeyup="return txtBoxFormat(this, '99/99/9999', event);" id="destino2"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>03</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Número 
+            de CPF ou CGC</font></td>
+            <td><input type="text" name="destino3" id="destino3"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>04</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Código 
+            da Receita</font></td>
+            <td><input type="text" name="destino4" id="destino4"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>05</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Número 
+            de Referência</font></td>
+            <td><input type="text" name="destino5" id="destino5"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>06</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Data de Vencimento</font></td>
+            <td><input type="text" name="destino6" maxlength="10" onkeyup="return txtBoxFormat(this, '99/99/9999', event);" id="destino6"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>07</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor do Principal</font></td>
+            <td><input class="right" type="text" name="destino7" value="" onfocus="startCalc();" onblur="stopCalc();" id="destino7"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>08</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor da Multa</font></td>
+            <td><input class="right" type="text" name="destino8" value="" onfocus="startCalc();" onblur="stopCalc();" id="destino8"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>09</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor dos Juros 
+            e/ou Encargos DL - 1.025/69</font></td>
+            <td><input class="right" type="text" name="destino9" value="" onfocus="startCalc();" onblur="stopCalc();" id="destino9"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>10</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Valor Total</font></td>
+            <td><input class="right" type="text" name="destino10" id="destino10"></td>
+          </tr>
+          <tr>
+            <td valign="top"><font size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>11</strong></font> <font size="1" face="Geneva, Arial, Helvetica, sans-serif">Autenticação 
+            Bancária (somente nas 1ª e 2ª vias)</font></td>
+            <td valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top">&nbsp;</td>
+          </tr>
+        </tbody></table>
+        <span class="dir"><br>
+        </form>
+</body>
+</html>
